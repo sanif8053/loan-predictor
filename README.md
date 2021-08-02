@@ -14,6 +14,7 @@ workflows:
     - android-build: {} 
     - sofy-upload:
       inputs:
+      #choose one of the following variable as per your above choice of build step
       - build_path: $SOFY_APK_PATH (Android build), $BITRISE_IPA_PATH (Xcode Archive & Export for iOS), $BITRISE_APP_DIR_PATH (Xcode build for simulator)
       - subscription_key: 80b30c4e-c920-40a7-9682-6ad2e779a67f #from your secrets
     #...
