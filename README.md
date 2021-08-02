@@ -5,12 +5,12 @@ workflows:
   primary:
     steps:
     #...
-    # use one of the following build step as per  your requirement
-    #To generate .app file
-    -  Xcode build for simulator: {}
-    #To generate .ipa file
-    - Xcode Archive & Export for iOS: {} 
-    #To generate .apk file
+    # use one of the following build step as per your requirement
+    #To generate .app file (Xcode build for simulator)
+    - xcode-build-for-simulator@0: {}
+    #To generate .ipa file (Xcode Archive & Export for iOS)
+    - xcode-archive@3: {}
+    #To generate .apk file (Android build)
     - android-build: {} 
     - sofy-upload:
       inputs:
